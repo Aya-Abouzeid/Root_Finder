@@ -1,0 +1,14 @@
+The solution is      1.00000
+
+Time taken is    0.3197605 seconds
+
+Number of iterations is 5
+
+
+Iteration          Xi        |Ea|
+   0          1.33333
+   1          1.08012     0.25321
+   2          1.00532     0.07480
+   3          1.00002     0.00529
+   4          1.00000     0.00002
+   5          1.00000     0.00000

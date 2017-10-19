@@ -1,0 +1,24 @@
+function [ B,L_Matrix ] = Partial_Pivoting( A,input,L_Matrix )
+Max=A(input,input);
+Max_index=input;
+index=input;
+length=size(A);
+while(index<=length(1,1))
+    if(abs(A(index,input))>abs(Max))
+    Max_index=index;
+    Max=A(index,input);
+    end
+    index=index+1;
+end
+if(Max_index~=input)
+    temp1=A(input,:);
+    A(input,:)=A(Max_index,:);
+    A(Max_index,:)=temp1;
+end
+B=A;
+if(input~=1&&input~=Max_index)
+  temp3=L_Matrix(input,1:input-1);
+ L_Matrix(input,1:input-1)=L_Matrix(Max_index,1:input-1);
+  L_Matrix(Max_index,1:input-1)=temp3;
+end
+end
